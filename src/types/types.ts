@@ -6,10 +6,10 @@ export type MenuContainerClass = "menu-container";
 export type MenuItemClass = "menu-item";
 
 export interface StyleProps {
-  CardContainer?: CardContainerClass;
-  CardTitle?: CardTitleClass;
-  CardText?: CardTextClass;
-  MenuIcon?: MenuIconClass;
-  MenuContainer?: MenuContainerClass;
-  MenuItem?: MenuItemClass;
+  cardContainer?: CardContainerClass;
+  cardTitle?: CardTitleClass;
+  cardText?: CardTextClass;
+  menuIcon?: MenuIconClass;
+  menuContainer?: MenuContainerClass;
+  menuItem?: MenuItemClass;
 }
