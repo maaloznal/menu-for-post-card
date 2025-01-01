@@ -13,7 +13,7 @@ const PostWithMenu = () => {
     setMenuVisible(false);
   };
   return (
-    <div style={{ position: "relative" }}>
+    <div className="post-with-menu">
       <PostCard
         title="Заголовок поста"
         text="Текст поста..."

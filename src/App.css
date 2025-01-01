@@ -12,3 +12,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.post-with-menu{
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .post-with-menu{
+    width: 100%;
+  }
+}
