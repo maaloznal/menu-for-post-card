@@ -1,19 +1,17 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import PostCard from "../PostCard/PostCard";
 import PostMenu from "../PostMenu/PostMenu";
-import styled from "styled-components";
+import { StyleProps } from "../../types/types";
 
-const PostWithMenuContainer = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
-`;
-
-const PostWithMenu = () => {
+const PostWithMenu: FC<StyleProps> = ({
+  postWithMenu = "post-with-menu",
+  cardContainer = "card-container",
+  cardTitle = "card-title",
+  cardText = "card-text",
+  menuIcon = "menu-icon",
+  menuContainer = "menu-container",
+  menuItem = "menu-item",
+}) => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   const handleMenuClick = () => {
@@ -25,14 +23,24 @@ const PostWithMenu = () => {
   };
 
   return (
-    <PostWithMenuContainer>
+    <div className={postWithMenu}>
       <PostCard
         title="Заголовок поста"
         text="Текст поста..."
         onMenuClick={handleMenuClick}
+        cardContainer={cardContainer}
+        cardTitle={cardTitle}
+        cardText={cardText}
+        menuIcon={menuIcon}
       />
-      {menuVisible && <PostMenu onClose={closeMenu} />}
-    </PostWithMenuContainer>
+      {menuVisible && (
+        <PostMenu
+          onClose={closeMenu}
+          menuContainer={menuContainer}
+          menuItem={menuItem}
+        />
+      )}
+    </div>
   );
 };
 
