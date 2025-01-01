@@ -10,6 +10,11 @@ const MenuContainer = styled.div`
   width: 150px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 10;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    top: 30px;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -21,6 +26,11 @@ const MenuItem = styled.div`
   &:hover {
     background-color: #f0f0f0;
   }
+
+  @media (max-width: 768px) {
+    padding: 8px;
+    font-size: 12px;
+  }
 `;
 
 interface PostMenuProps {
@@ -30,11 +40,28 @@ interface PostMenuProps {
 const PostMenu: FC<PostMenuProps> = ({ onClose }) => {
   return (
     <MenuContainer>
-      <MenuItem onClick={() => {alert("Редактировать пост"); onClose()}}>
+      <MenuItem
+        onClick={() => {
+          alert("Редактировать пост");
+          onClose();
+        }}
+      >
         Редактировать пост
       </MenuItem>
-      <MenuItem onClick={() => {alert("Удалить пост"); onClose()}}>Удалить пост</MenuItem>
-      <MenuItem onClick={() => {alert("Добавить в избранное"); onClose()}}>
+      <MenuItem
+        onClick={() => {
+          alert("Удалить пост");
+          onClose();
+        }}
+      >
+        Удалить пост
+      </MenuItem>
+      <MenuItem
+        onClick={() => {
+          alert("Добавить в избранное");
+          onClose();
+        }}
+      >
         Добавить в избранное
       </MenuItem>
     </MenuContainer>

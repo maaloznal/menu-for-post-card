@@ -13,12 +13,87 @@
   color: #888;
 }
 
-.post-with-menu{
+/* App.css */
+
+/* Стили для PostCard */
+.card-container {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Стили для PostMenu */
+.menu-container {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-color: white;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Адаптивные стили */
 @media (max-width: 768px) {
-  .post-with-menu{
-    width: 100%;
+  .card-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 12px;
+  }
+
+  .menu-icon {
+    font-size: 18px;
+  }
+
+  .menu-container {
+    width: 120px;
+    top: 30px;
+  }
+
+  .menu-item {
+    padding: 8px;
+    font-size: 12px;
   }
 }
