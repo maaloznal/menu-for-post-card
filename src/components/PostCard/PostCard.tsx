@@ -40,7 +40,7 @@ const PostCard: FC<PostCardProps> = ({ title, text, onMenuClick }) => {
     <CardContainer>
       <CardTitle>{title}</CardTitle>
       <CardText>{text}</CardText>
-      <MenuIcon onClick={onMenuClick}></MenuIcon>
+      <MenuIcon onClick={onMenuClick}>{"\u2630"}</MenuIcon>{" "}
     </CardContainer>
   );
 };
