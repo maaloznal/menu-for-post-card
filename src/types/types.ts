@@ -1,3 +1,5 @@
+export type ScreenSize = "desktop" | "tablet" | "mobile";
+
 export type AppContainerClass = "app-container";
 export type PostWithMenuClass = "post-with-menu";
 export type CardContainerClass = "card-container";
@@ -6,6 +8,7 @@ export type CardTextClass = "card-text";
 export type MenuIconClass = "menu-icon";
 export type MenuContainerClass = "menu-container";
 export type MenuItemClass = "menu-item";
+
 
 export interface StyleProps {
   appContainer?: AppContainerClass;

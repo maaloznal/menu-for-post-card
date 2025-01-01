@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import PostCard from "../PostCard/PostCard";
 import PostMenu from "../PostMenu/PostMenu";
 import { StyleProps } from "../../types/types";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const PostWithMenu: FC<StyleProps> = ({
   postWithMenu = "post-with-menu",
@@ -13,6 +14,7 @@ const PostWithMenu: FC<StyleProps> = ({
   menuItem = "menu-item",
 }) => {
   const [menuVisible, setMenuVisible] = useState(false);
+  const screenSize = useScreenSize();
 
   const handleMenuClick = () => {
     setMenuVisible(!menuVisible);
@@ -23,7 +25,7 @@ const PostWithMenu: FC<StyleProps> = ({
   };
 
   return (
-    <div className={postWithMenu}>
+    <div className={`${postWithMenu} ${screenSize}`}>
       <PostCard
         title="Заголовок поста"
         text="Текст поста..."

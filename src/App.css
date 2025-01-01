@@ -22,42 +22,42 @@
 .post-with-menu {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .card-container {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
   margin: 0;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .card-text {
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
 }
 
 .menu-icon {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .menu-container {
   position: absolute;
-  top: 40px;
-  right: 10px;
+  top: 50px;
+  right: 15px;
   background-color: white;
   border-radius: 5px;
   width: 150px;
@@ -76,35 +76,53 @@
   background-color: #f0f0f0;
 }
 
-@media (max-width: 768px) {
-  .post-with-menu {
-    max-width: 100%;
-  }
+.desktop .card-container {
+  max-width: 400px;
+  padding: 30px;
+}
 
-  .card-container {
-    max-width: 100%;
-    padding: 15px;
-  }
+.desktop .card-title {
+  font-size: 24px;
+}
 
-  .card-title {
-    font-size: 16px;
-  }
+.desktop .card-text {
+  font-size: 16px;
+}
 
-  .card-text {
-    font-size: 12px;
-  }
+.desktop .menu-icon {
+  font-size: 24px;
+}
 
-  .menu-icon {
-    font-size: 18px;
-  }
+.tablet .card-container {
+  max-width: 100%;
+  padding: 20px;
+}
 
-  .menu-container {
-    width: 120px;
-    top: 30px;
-  }
+.tablet .card-title {
+  font-size: 20px;
+}
 
-  .menu-item {
-    padding: 8px;
-    font-size: 12px;
-  }
+.tablet .card-text {
+  font-size: 14px;
+}
+
+.tablet .menu-icon {
+  font-size: 20px;
+}
+
+.mobile .card-container {
+  max-width: 100%;
+  padding: 15px;
+}
+
+.mobile .card-title {
+  font-size: 18px;
+}
+
+.mobile .card-text {
+  font-size: 14px;
+}
+
+.mobile .menu-icon {
+  font-size: 18px;
 }
